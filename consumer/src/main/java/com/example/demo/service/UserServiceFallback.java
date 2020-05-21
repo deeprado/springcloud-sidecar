@@ -30,4 +30,9 @@ public class UserServiceFallback implements UserService {
         return "ruby fallback user";
     }
 
+    @Override
+    public String getAspUser() {
+        return "asp fallback user";
+    }
+
 }

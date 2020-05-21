@@ -48,6 +48,12 @@ public class JavaController {
         return restTemplate.getForEntity("http://rb-sidecar/getUser", String.class).getBody();
     }
 
+    @RequestMapping("/asp-user")
+    public String AspUser() {
+        log.info(" asp user");
+        return restTemplate.getForEntity("http://asp-sidecar/getUser", String.class).getBody();
+    }
+
     @RequestMapping("/test-py-user")
     public String TestPyUser() {
         return userService.getPythonUser();
@@ -71,5 +77,10 @@ public class JavaController {
     @RequestMapping("/test-ruby-user")
     public String TestRubyUser() {
         return userService.getRubyUser();
+    }
+
+    @RequestMapping("/test-asp-user")
+    public String TestAspUser() {
+        return userService.getAspUser();
     }
 }

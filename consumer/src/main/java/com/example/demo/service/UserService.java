@@ -21,4 +21,7 @@ public interface UserService {
 
     @RequestMapping("/rb/getUser")
     public String getRubyUser();
+
+    @RequestMapping("/asp/getUser")
+    public String getAspUser();
 }
