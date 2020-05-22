@@ -44,13 +44,11 @@ public class JavaController {
 
     @RequestMapping("/ruby-user")
     public String RubyUser() {
-        log.info(" ruby user");
         return restTemplate.getForEntity("http://rb-sidecar/getUser", String.class).getBody();
     }
 
     @RequestMapping("/asp-user")
     public String AspUser() {
-        log.info(" asp user");
         return restTemplate.getForEntity("http://asp-sidecar/getUser", String.class).getBody();
     }
 
